@@ -1,5 +1,6 @@
-= Important Asciidoc Formats
+:toc:
 
+= Important Asciidoc Formats
 == Titles
 
 = Document Title (Level 0)
