@@ -1,15 +1,34 @@
+= Important Asciidoc Formats
 
-= Ueberschrift 1
-=== Ueberschrift 1.1.1
-=== Ueberschrift 1.1.2
+== Titles
 
-==== Ueberschrift 4
+d= Document Title (Level 0)
 
-===== Ueberschrift 5
+== Level 1 Section Title
+
+=== Level 2 Section Title
+
+==== Level 3 Section Title
+
+===== Level 4 Section Title
+
+====== Level 5 Section Title
+
+
+== Formatting
 
 normal, _italic_, *bold*, +mono typed+
 
 Command: `ls -l`
+
+
+....
+error: The requested operation returned error: 1954 Forbidden search for defensive operations manual
+absolutely fatal: operation initiation lost in the dodecahedron of doom
+would you like to die again? y/n
+....
+
+== Terms, Lists
 
 
 .Labeled
@@ -30,14 +49,14 @@ This is a numbered list:
 . One
 . Two
 . Three: lfjkslfjklfjlj flsdfj djflsdjk dfsakfldjsa  afdfs dfsdklfldf saddfds sdffsdfd ldfdfdd fdfdsafsdf dfsdsdff sfsdfdfds sdfdsffdfd fdsfsdsdfds
+. *Four*: lfjkslfjklfjlj flsdfj djflsdjk dfsakfldjsa  afdfs dfsdklfldf saddfds sdffsdfd ldfdfdd fdfdsafsdf dfsdsdff sfsdfdfds sdfdsffdfd fdsfsdsdfds
 
-+
+== Images
+
 .An architecture diagram
-image::image/2019-10-24_16-20-40.png[alt="not bad.",width=1024,height=1024]
+image::images/test.png[alt="not bad.",width=1024,height=1024]
 
-. *Three*: lfjkslfjklfjlj flsdfj djflsdjk dfsakfldjsa  afdfs dfsdklfldf saddfds sdffsdfd ldfdfdd fdfdsafsdf dfsdsdff sfsdfdfds sdfdsffdfd fdsfsdsdfds
-
-Type some *text* which is rendered on the *right*.
+== Tips
 
 TIP: there are
 
@@ -46,6 +65,8 @@ IMPORTANT: this is important
 WARNING: be careful
 
 CAUTION: do not use
+
+== Code Block
 
 [source,java]
 ----
@@ -56,36 +77,37 @@ public class Test {
 }
 ----
 
+== Tables
 
+.Table Title
+|===
+|Name of Column 1 |Name of Column 2 |Name of Column 3
 
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+|Cell in column 3, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+|===
+
+== Copyright
 
 (C)
 (R)
 
+== Links
+
 http://google.com
+
+link:doc-2.adoc[Relative link to other document]
 
 ---
 
 
 
-
-
-
-
-.this block title
-=====
-Content in block
-=====
-
-.this block title
-=====
-Content in block
-=====
-
-test
-
-
-link:doc-2.adoc[Docs]
+== Footnote
 
 This is some text about an object{wj}footnote:[This is the first footnote] is found.
 
