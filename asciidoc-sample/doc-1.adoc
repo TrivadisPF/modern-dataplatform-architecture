@@ -85,7 +85,7 @@ Content in block
 test
 
 
-link:dock-2.adoc[Docs]
+link:doc-2.adoc[Docs]
 
 This is some text about an object{wj}footnote:[This is the first footnote] is found.
 
