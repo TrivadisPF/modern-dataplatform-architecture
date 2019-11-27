@@ -1,0 +1,41 @@
+# M17: Event- and Message-Integration
+
+## Motivation
+// Writing a short text what is the ultimate neccessity of Stream Data ingestion, Why we need it and how it differentiates to other modules.
+
+
+## General concepts
+// -- General concepts that are important here as it is the actual part where the further reader (solution architect) should find his demand.
+// -- It should be explained where the data is coming from, what (in general) we want to do with it and how we can do it, finally where the output goes to.
+// -- For example in Big Data ingestions it is reading from relational sources as batch (with some intelligence maybe). But also beeing able to ingest large unstructered datasets from just file systems, like images, audios or videos.
+
+## Typical Patterns
+// -- the ingestion modules should describe as well the sources and the targets that might occour in a generic way (but not too generic). For example we can mention in the Big Data ingestion, that there is often the need to run it on a schedule and use the current time in the load. Or that ingesting files can be also that they have to be loaded from a smb/nfs/s3 whatever first. Or also there might be public connection, so we need to have Internet connection etcetc.
+// -- Mention the DataCatalog from the Module M15: Govern the Data Lake (also in the best practices)
+
+## Best Practices
+//-- the best practice should give a summary over the typical patterns but discusses them more in detail. E.g. in the Big Data ingestion also discuss how to do a delta or incremental update, or even using change data capture on the database.
+//-- Mention the DataCatalog
+//-- Also dicsuss some anti-patterns and misunderstandings
+
+
+## Architectural requirements & functional capabilities of the tools
+//-- From the patterns you can derive the functional capabilities of the tools and explore them in a more general manner.
+//-- The architectural requirements will be a zoom-out version of the actual requirements (e.g. it needs to be able to run in a distributed mode and maybe also standalone, It can be run in a container for CI/CD) Metrics are exposed to the outside.
+
+### Event Hub
+
+The following properties describe the features an Event Hub should provide.
+
+* *Publish / Subscribe* - Offers an implementation of the Publish/Subscribe pattern. A producer publishes a message into the Event Hub (on a topic) and this message can be consumed by 0 or more consumers.
+* *Horizontally Scalable* - The infrastructure is horizontally scalable and by adding more nodes the throughput on a topic the throughput can be increased.
+* *Highly Available* - there is no single point of failure (SPOF)
+* *Pull-Based Consumption* - A consumer pulls for messages on the Event Hub, so he has the consumer rate under control. By that, no back pressure mechanisms are necessary, as there is no chance of a consumer being overloaded (consumer only consumes the amount of messages he is able to process).
+* *Durable* - Messages can be sent in a durable manner so that a producer has the guarantee that a message is not lost once it has been successfully sent to the Event Hub.
+* *Interoperability* - Event Hub supports APIs for many different languages, both for producing and consuming from the Event Hub.
+* *Schema-Less* - Event Hub does not know about the format of the message being sent over a given topic. For the Event Hub the payload is just an array of bytes, and the producer is responsible to serialise its data in way that it is de-serialisable by a consumer. 
+* *Support of Stream and Batch Consumers* - offline and with large backlog
+* *Efficient Long-Term Storage* -
+* *Guaranteed Message Order* -
+* *Support Re-Consuming of events* -
+* *Secure Message Flow* -
