@@ -1,5 +1,4 @@
-:toc:
-
+:toc: right
 = Important Asciidoc Formats
 == Titles
 
